@@ -1,27 +1,43 @@
 #box {
-    border: black 1px solid;
-    background-color: white;
-    padding: 10px;
-    width: 100%;
+    background-image: url('images/palette.png');
+    border: 2px black solid;
+    padding: 1%;
+    width: 98%;
     height: 100%;
-    /*width: 750px;
-    height: 500px;*/
-}
-
-.topLeft {
-    text-align: left;
-    margin-top: -2.3%;
-    margin-left: -1%;
-}
-
-.topRight {
-    text-align: right;
-    margin-right: -1%;
 }
 
 button {
     width: 10%;
-    padding: 0.54%;
-    margin-left: 18.5px;
-    margin-right: 18.5px;
+    padding: 0.5%;
+    background-color: white;
+    border: 2px black solid;
+    color: black;
+}
+
+.topLeft {
+    text-align: left;
+    margin-top: -2.6%;
+    
+}
+
+.topRight {
+    text-align: right;
+}
+
+#box2 {
+    background-color: white;
+    border: 2px black solid;
+    text-align: center;
+    padding: 1%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    color: white;
 }
