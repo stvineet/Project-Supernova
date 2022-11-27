@@ -1,10 +1,10 @@
 body {
-    background-color: white;
+    background-color: black;
 }
 
 #box {
     background-image: url('images/palette.png');
-    border: 2px black solid;
+    border: 2px white solid;
     padding: 1%;
     width: 98%;
     height: 100%;
@@ -13,9 +13,9 @@ body {
 button {
     width: 10%;
     padding: 0.5%;
-    background-color: white;
-    border: 2px black solid;
-    color: black;
+    background-color: black;
+    border: 2px white solid;
+    color: white;
     text-align: center;
 }
 
@@ -32,8 +32,8 @@ button {
 }
 
 #box3 {
-    background-color: white;
-    border: 2px black solid;
+    background-color: black;
+    border: 2px white solid;
     text-align: center;
     padding: 1%;
     margin-top: 15%;
@@ -42,14 +42,14 @@ button {
 }
 
 h1 {
-    color: black;
+    color: white;
     text-align: center;
 }
 
 #box4 {
     text-align: center;
     margin-top: 12%;
-    margin-bottom: 7.9%;
+    margin-bottom: 7.5%;
 }
 
 .b2 {
@@ -62,9 +62,9 @@ h1 {
 }
 
 button:hover {
-    background-color: black;
-    border-color: white;
-    color: white;
+    background-color: white;
+    border-color: black;
+    color: black;
     transition-duration: 0.5s;
 }
 

@@ -6,25 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="Main.js"></script>
-    <link rel="stylesheet" href="Main.css" type="text/css">
+    <link rel="stylesheet" href="Main.css" type="text/css" id="css">
     <title>Color Guessing Game</title>
 </head>
 
 <body>
     <div id="box">
-        <div class="topRight">
-            <button onclick="" id="ldark">Light/Dark</button>
-        </div>
-        <div class="topLeft">
-            <button onclick="" id="lboard">Leaderboard</button>
-        </div>
         <div id="box2">
+            <button class="button b1 topLeft" onclick="" id="lboard">Leaderboard</button>
+            <button class="button b1 topRight" onclick="darkMode()" id="ldark">Light/Dark</button>
+        </div>
+        <div id="box3">
             <h1>Color Guessing Game</h1>
         </div>
-        <div class="levels">
-            <a href="Easy.html"><button onclick="">Easy</button></a>
-            <a href="Medium.html"><button onclick="">Medium</button></a>
-            <a href="Hard.html"><button onclick="">Hard</button></a>
+        <div id="box4">
+            <a href="Easy.html"><button class="button b2 e" onclick="">Easy</button></a>
+            <a href="Medium.html"><button class="button b2 m" onclick="">Medium</button></a>
+            <a href="Hard.html"><button class="button b2 h" onclick="">Hard</button></a>
         </div>
     </div>
 </body>

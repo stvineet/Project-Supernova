@@ -5,30 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="Main.js"></script>
-    <link rel="stylesheet" href="Levels.css" type="text/css">
+    <script src="Levels.js"></script>
+    <link rel="stylesheet" href="Levels.css" type="text/css" id="css">
     <title>Color Guessing Game</title>
 </head>
 
 <body>
     <div id="box">
-        <div class="topRight">
-            <button onclick="" id="ldark">Light/Dark</button>
-        </div>
-        <div class="topLeft">
-            <button onclick="" id="lboard">Leaderboard</button>
-        </div>
-        <h1>Medium Mode</h1>
-        <h3>Guess a color</h3>
-        <h3>Score: 0</h3>
         <div id="box2">
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
+            <button class="button b1 topLeft" onclick="" id="lboard">Leaderboard</button>
+            <button class="button b1 topRight" onclick="darkMode()" id="ldark">Light/Dark</button>
         </div>
-        <button>Hint: 0</button>
+        <div id="box3">
+            <h1>Medium Mode</h1>
+            <h3>Guess a color</h3>
+            <h3>Score: 0</h3>
+        </div>
+        <div id="box4">
+            <button class="button b2 o1" onclick="" id="c1">Color 1</button>
+            <button class="button b2 o2" onclick="" id="c2">Color 2</button>
+            <button class="button b2 o3" onclick="" id="c3">Color 3</button>
+            <button class="button b2 o4" onclick="" id="c4">Color 4</button>
+            <button class="button b2 o5" onclick="" id="c5">Color 5</button>
+            </br>
+            <button class="button b3" onclick="color()">Hint: 0</button>
+        </div>
     </div>
 </body>
 

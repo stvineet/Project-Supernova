@@ -1,3 +1,7 @@
+body {
+    background-color: white;
+}
+
 #box {
     background-image: url('images/palette.png');
     border: 2px black solid;
@@ -12,32 +16,93 @@ button {
     background-color: white;
     border: 2px black solid;
     color: black;
-}
-
-.topLeft {
-    text-align: left;
-    margin-top: -2.6%;
-    
-}
-
-.topRight {
-    text-align: right;
+    text-align: center;
 }
 
 #box2 {
+    text-align: center;
+}
+
+.topLeft {
+    margin-right: 39.5%;
+}
+
+.topRight {
+    margin-left: 39.5%;
+}
+
+#box3 {
     background-color: white;
     border: 2px black solid;
     text-align: center;
     padding: 1%;
-    margin-top: 15%;
-    margin-bottom: 15%;
+    margin: 1%;
 }
 
 h1 {
-    color: white;
+    color: black;
     text-align: center;
 }
 
 h3 {
+    color: black;
+    text-align: left;
+}
+
+#box4 {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 2.5%;
+}
+
+.b2 {
+    width: 17%;
+    padding: 6.4%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 7.4%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: black;
+    border-color: white;
     color: white;
+    transition-duration: 0.5s;
+}
+
+.b2:hover {
+    border-color: black;
+    color: black;
+}
+
+.o1:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.o2:hover {
+    background-color: rgb(0, 255, 0);
+}
+
+.o3:hover {
+    background-color: rgb(0, 0, 255);
+}
+
+.o4:hover {
+    background-color: rgb(255, 255, 0);
+}
+
+.o5:hover {
+    background-color: rgb(255, 0, 255);
+}
+
+.b3:hover {
+    border-color: black;
+    color: black;
+    background-color: rgb(0, 255, 255);
+}
+
+button:active {
+    background-color: red;
 }
