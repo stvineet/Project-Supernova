@@ -1,4 +1,5 @@
 var x = document.getElementById("css").href;
+var clicked = 0;
 var total = 0;
 
 function darkMode() {
@@ -26,86 +27,54 @@ function color() {
             }
         }
     }
-
     for (i = 0; i < 5; i++) {
         document.getElementById(c[i]).style.backgroundColor = "rgb(" + r[j] + ", " + r[j + 1] + ", " + r[j + 2] + ")";
         j = j + 3;
     }
 }
 
-function clicked() {
-    if (document.getElementById("c1").onclick) {
-        document.getElementById("scr").innerHTML = "c1";
-        return "c1";
-    }
-    if (document.getElementById("c2").onclick) {
-        document.getElementById("scr").innerHTML = "c2";
-        return "c2";
-    }
-    if (document.getElementById("c3").onclick) {
-        document.getElementById("scr").innerHTML = "c3";
-        return "c3";
+function clicked1() {
+    clicked = 1;
+}
 
-    }
-    if (document.getElementById("c4").onclick) {
-        document.getElementById("scr").innerHTML = "c4";
-        return "c4";
+function clicked2() {
+    clicked = 2;
+}
 
-    }
-    if (document.getElementById("c5").onclick) {
-        document.getElementById("scr").innerHTML = "c5";
-        return "c5";
-    } else {
-        return false;
-    }
+function clicked3() {
+    clicked = 3;
+}
+
+function clicked4() {
+    clicked = 4;
+}
+
+function clicked5() {
+    clicked = 5;
 }
 
 function correct() {
-    var cor = Math.floor(Math.random() * 5) + 1;
-    var c = "c" + cor;
-
-    if (c == "c1") {
-        return "c1";
-
-    } else if (c == "c2") {
-        return "c2";
-
-    } else if (c == "c3") {
-        return "c3";
-
-    } else if (c == "c4") {
-        return "c4";
-
-    } else if (c == "c5") {
-        return "c5";
-    } else {
-        return false;
-    }
+    var c = Math.floor(Math.random() * 5) + 1;
+    return c;
 }
 
 function score() {
     var scr = document.getElementById("scr");
-    var click = clicked();
     var cor = correct();
-    total = total;
 
-
-
-    /* if (click == cor) {
+    document.getElementById("c3").innerHTML = cor;
+    document.getElementById("c1").innerHTML = clicked;
+    document.getElementById("c2").innerHTML = total;
+    if (clicked == cor) {
         total++;
-        scr.innerHTML = "Score: " + total; + " points";
+        scr.innerHTML = "Score: 0 points";
     } else if (click != cor) {
         scr.innerHTML = "Wrong Answer!";
     } else {
         scr.innerHTML = "Error";
-    } */
-
-    // clicked is always "c1" for some reason
-
-    document.getElementById("c4").innerHTML = click;
-    document.getElementById("c5").innerHTML = cor;
+    }
 }
 
 function hint() {
-    //
+
 }
