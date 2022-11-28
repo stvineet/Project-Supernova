@@ -1,12 +1,12 @@
-var x = document.getElementById("css").href;
+var y = document.getElementById("css2").href;
 var clicked = 0;
 var total = 0;
 
 function darkMode() {
-    if (x == "LevelsDark.css") {
-        x = document.getElementById("css").href = "Levels.css"
+    if (y == "LevelsDark.css") {
+        y = document.getElementById("css2").href = "Levels.css"
     } else {
-        x = document.getElementById("css").href = "LevelsDark.css"
+        y = document.getElementById("css2").href = "LevelsDark.css"
     }
 }
 
@@ -61,10 +61,12 @@ function correct() {
 function score() {
     var scr = document.getElementById("scr");
     var cor = correct();
+    //var total2 = this.total;
 
     document.getElementById("c3").innerHTML = cor;
     document.getElementById("c1").innerHTML = clicked;
     document.getElementById("c2").innerHTML = total;
+
     if (clicked == cor) {
         total++;
         scr.innerHTML = "Score: 0 points";
