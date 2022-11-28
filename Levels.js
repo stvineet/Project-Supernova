@@ -1,5 +1,6 @@
 var x = document.getElementById("css").href;
 var total = 0;
+
 function darkMode() {
     if (x == "LevelsDark.css") {
         x = document.getElementById("css").href = "Levels.css"
@@ -33,53 +34,78 @@ function color() {
 }
 
 function clicked() {
-    if (document.getElementById("c1").clicked == true) {
-        document.getElementById("scr").innerHTML = "c5555";
+    if (document.getElementById("c1").onclick) {
+        document.getElementById("scr").innerHTML = "c1";
+        return "c1";
     }
-    if (document.getElementById("c2").clicked == true) {
-        return document.getElementById("c2").id;
+    if (document.getElementById("c2").onclick) {
+        document.getElementById("scr").innerHTML = "c2";
+        return "c2";
     }
-    if (document.getElementById("c3").clicked == true) {
-        return document.getElementById("c3").id;
+    if (document.getElementById("c3").onclick) {
+        document.getElementById("scr").innerHTML = "c3";
+        return "c3";
+
     }
-    if (document.getElementById("c4").clicked == true) {
-        return document.getElementById("c4").id;
+    if (document.getElementById("c4").onclick) {
+        document.getElementById("scr").innerHTML = "c4";
+        return "c4";
+
     }
-    if (document.getElementById("c5").clicked == true) {
-        return document.getElementById("c5").id;
+    if (document.getElementById("c5").onclick) {
+        document.getElementById("scr").innerHTML = "c5";
+        return "c5";
+    } else {
+        return false;
     }
 }
 
 function correct() {
-    var cor = 1;
-    //var cor = Math.floor(Math.random() * 5) + 1;
+    var cor = Math.floor(Math.random() * 5) + 1;
     var c = "c" + cor;
 
     if (c == "c1") {
-        return document.getElementById("c1").id;
+        return "c1";
+
     } else if (c == "c2") {
-        return document.getElementById("c2").id;
+        return "c2";
+
     } else if (c == "c3") {
-        return document.getElementById("c3").id;
+        return "c3";
+
     } else if (c == "c4") {
-        return document.getElementById("c4").id;
+        return "c4";
+
     } else if (c == "c5") {
-        return document.getElementById("c5").id;
+        return "c5";
+    } else {
+        return false;
     }
 }
 
 function score() {
     var scr = document.getElementById("scr");
-    clicked();
-    correct();
+    var click = clicked();
+    var cor = correct();
+    total = total;
 
-    if (clicked() == correct()) {
+
+
+    /* if (click == cor) {
         total++;
-        scr.style.color = 'blue';
-        scr.innerHTML = "Score: " + total;
-    }
+        scr.innerHTML = "Score: " + total; + " points";
+    } else if (click != cor) {
+        scr.innerHTML = "Wrong Answer!";
+    } else {
+        scr.innerHTML = "Error";
+    } */
+
+    // clicked is always "c1" for some reason
+
+    document.getElementById("c4").innerHTML = click;
+    document.getElementById("c5").innerHTML = cor;
 }
 
 function hint() {
-
+    //
 }
