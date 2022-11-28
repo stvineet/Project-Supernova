@@ -65,35 +65,30 @@ h3 {
     font-weight: bold;
 }
 
-button:hover {
+.b1:hover {
     background-color: black;
     border-color: white;
     color: white;
     transition-duration: 0.5s;
 }
 
-.b2:hover {
-    border-color: black;
-    color: black;
-}
-
-.o1:hover {
+.o1 {
     background-color: rgb(255, 0, 0);
 }
 
-.o2:hover {
+.o2 {
     background-color: rgb(0, 255, 0);
 }
 
-.o3:hover {
+.o3 {
     background-color: rgb(0, 0, 255);
 }
 
-.o4:hover {
+.o4 {
     background-color: rgb(255, 255, 0);
 }
 
-.o5:hover {
+.o5 {
     background-color: rgb(255, 0, 255);
 }
 
@@ -101,6 +96,7 @@ button:hover {
     border-color: black;
     color: black;
     background-color: rgb(0, 255, 255);
+    transition-duration: 0.5s;
 }
 
 button:active {
