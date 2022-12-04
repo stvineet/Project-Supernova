@@ -60,18 +60,25 @@ function correct() {
 
 function end() {
     scr.innerHTML = "Score: 0";
+    hintT.innerHTML = "Hints: " + hints;
     alert("Game Over \n Score: " + total);
     total = 0;
+    hints = 0;
     history.back();
 }
 
 function score() {
+    document.getElementById("c5").style.display = "inline";
     globalThis.scr = document.getElementById("scr");
+    globalThis.hintT = document.getElementById("hint");
     var cor = correct();
     var start = (function () {
         return function () {
             if (!executed) {
+                globalThis.hints = 1;
                 globalThis.total = 0;
+                globalThis.counter = 0;
+                hintT.innerHTML = "Hints: " + hints;
                 executed = true;
             }
         };
@@ -81,6 +88,12 @@ function score() {
 
     if (clicked == cor) {
         total++;
+        counter++;
+        if (counter == 3) {
+            counter = 0;
+            hints++;
+            hintT.innerHTML = "Hints: " + hints;
+        }
         scr.innerHTML = "Score: " + total + " point(s)";
     } else if (clicked != cor) {
         end();
@@ -88,5 +101,9 @@ function score() {
 }
 
 function hint() {
-
+    if (hints > 0 && document.getElementById("c5").style.display != "none") {
+        hints--;
+        document.getElementById("c5").style.display = "none";
+        hintT.innerHTML = "Hints: " + hints;
+    }
 }
