@@ -41,32 +41,7 @@ button {
     margin-right: 37%;
 }
 
-h1 {
-    color: black;
-    text-align: center;
-}
-
 #box4 {
-    text-align: center;
-}
-
-h2 {
-    display: inline;
-}
-
-.E {
-    float: left;
-}
-
-.M {
-    float: none;
-}
-
-.H {
-    float: right;
-}
-
-#box5 {
     text-align: center;
     background-color: white;
     border: 2px black solid;
@@ -74,12 +49,8 @@ h2 {
     margin-bottom: 3.3%;
 }
 
-.C {
-    padding: 10.2%;
-    display: inline-block;
-}
-
-.Medium {
+#table {
+    margin: auto;
     border-left: 2px black solid;
     border-right: 2px black solid;
 }
