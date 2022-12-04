@@ -87,7 +87,7 @@ function score() {
     })();
 
     start();
-    
+
     if (clicked == cor) {
         total++;
         counter++;
@@ -106,7 +106,7 @@ function score() {
     } else if (clicked != cor) {
         lives--;
         livesT.innerHTML = lives;
-        if (lives <= 0) {
+        if (lives < 0) {
             end();
         }
     }
