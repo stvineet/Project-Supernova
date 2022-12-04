@@ -57,8 +57,10 @@ function correct() {
     var c = 0;
     if (document.getElementById("c5").style.display != "none") {
         c = Math.floor(Math.random() * 5) + 1;
-    } else {
+    } else if (document.getElementById("c4").style.display != "none") {
         c = Math.floor(Math.random() * 4) + 1;
+    } else {
+        c = Math.floor(Math.random() * 3) + 1;
     }
 
     return c;
@@ -79,6 +81,7 @@ function score() {
     globalThis.hintT = document.getElementById("hint");
     globalThis.livesT = document.getElementById("lives");
     var cor = correct();
+    document.getElementById("c4").style.display = "initial";
     document.getElementById("c5").style.display = "initial";
     var start = (function () {
         return function () {
@@ -121,9 +124,15 @@ function score() {
 }
 
 function hint() {
+    if (hints > 0 && document.getElementById("c5").style.display == "none" && document.getElementById("c4").style.display != "none") {
+        hints--;
+        document.getElementById("c4").style.display = "none";
+        hintT.innerHTML = hints;
+    }
     if (hints > 0 && document.getElementById("c5").style.display != "none") {
         hints--;
         document.getElementById("c5").style.display = "none";
         hintT.innerHTML = hints;
     }
+
 }
