@@ -34,7 +34,7 @@ button {
 #box3 {
     background-color: black;
     border: 2px white solid;
-    text-align: center;
+    text-align: right;
     padding: 1%;
     margin: 1%;
 }
@@ -46,7 +46,14 @@ h1 {
 
 h3 {
     color: white;
+}
+
+.guess {
     text-align: left;
+}
+
+.score {
+    float: left;
 }
 
 #box4 {

@@ -52,29 +52,22 @@ function correct() {
     } else {
         c = Math.floor(Math.random() * 2) + 1;
     }
-    
+
     return c;
 }
 
 function end() {
-if (lives == 0){
     scr.innerHTML = "Score: 0";
-    hintT.innerHTML = "Hints: " + hints;
+    hintT.innerHTML = hints;
     alert("Game Over \n Score: " + total);
     total = 0;
     hints = 0;
     history.back();
 }
-else if (lives >0){
-lives--;
-liv.innerHTML = "Extra Lives: "+lives;
-}
-}
 
 function score() {
     globalThis.scr = document.getElementById("scr");
     globalThis.hintT = document.getElementById("hint");
-    globalThis.liv = document.getElementById("liv");
     var cor = correct();
     document.getElementById("c3").style.display = "initial";
     var start = (function () {
@@ -83,26 +76,23 @@ function score() {
                 globalThis.hints = 1;
                 globalThis.total = 0;
                 globalThis.counter = 0;
-                globalThis.lives = 5;
-                hintT.innerHTML = "Hints: " + hints;
+                hintT.innerHTML = hints;
                 executed = true;
             }
         };
     })();
 
     start();
-    
+
     if (clicked == cor) {
         total++;
         counter++;
         if (counter == 3) {
             counter = 0;
             hints++;
-            lives++;
-            hintT.innerHTML = "Hints: " + hints;
+            hintT.innerHTML = hints;
         }
         scr.innerHTML = "Score: " + total + " point(s)";
-        liv.innerHTML = "Extra Lives: "+lives;
     } else if (clicked != cor) {
         end();
     }
@@ -112,6 +102,6 @@ function hint() {
     if (hints > 0 && document.getElementById("c3").style.display != "none") {
         hints--;
         document.getElementById("c3").style.display = "none";
-        hintT.innerHTML = "Hints: " + hints;
+        hintT.innerHTML = hints;
     }
 }
