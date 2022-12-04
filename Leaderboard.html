@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="Main.js"></script>
+    <script src="Levels.js"></script>
     <link rel="stylesheet" href="Leaderboard.css" type="text/css" id="css">
     <title>Color Guessing Game</title>
 </head>
@@ -13,37 +13,36 @@
 <body>
     <div id="box">
         <div id="box2">
-            <a href="Main.html"><button class="button b1 topLeft" id="lboard">Main Menu</button></a>
+            <a href="Main.html"><button class="button b1 topLeft">Main Menu</button></a>
             <button class="button b1 topRight" onclick="darkMode()">Light/Dark</button>
         </div>
         <div id="box3">
             <h1>Leaderboard</h1>
         </div>
         <div id="box4">
-            <table id="table">
+            <table>
                 <tr>
                     <th>Easy</th>
                     <th>Medium</th>
                     <th>Hard</th>
                 </tr>
                 <tr>
-                    <td>1E</td>
-                    <td>1M</td>
-                    <td>1H</td>
+                    <td><span id="name1E">Name: </span><span id="score1E">0</span></td>
+                    <td><span id="name1M">Name: </span><span id="score1M">0</span></td>
+                    <td><span id="name1H">Name: </span><span id="score1H">0</span></td>
                 </tr>
                 <tr>
-                    <td>2E</td>
-                    <td>2M</td>
-                    <td>2H</td>
+                    <td><span id="name2E">Name: </span><span id="score2E">0</span></td>
+                    <td><span id="name2M">Name: </span><span id="score2M">0</span></td>
+                    <td><span id="name2H">Name: </span><span id="score2H">0</span></td>
                 </tr>
                 <tr>
-                    <td>3E</td>
-                    <td>3M</td>
-                    <td>3H</td>
+                    <td><span id="name3E">Name: </span><span id="score3E">0</span></td>
+                    <td><span id="name3M">Name: </span><span id="score3M">0</span></td>
+                    <td><span id="name3H">Name: </span><span id="score3H">0</span></td>
                 </tr>
             </table>
         </div>
-
     </div>
 </body>
 
