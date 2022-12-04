@@ -91,6 +91,7 @@ function score() {
     })();
 
     start();
+
     if (clicked == cor) {
         total++;
         counter++;

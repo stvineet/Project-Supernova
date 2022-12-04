@@ -46,7 +46,13 @@ function clicked3() {
 }
 
 function correct() {
-    var c = Math.floor(Math.random() * 3) + 1;
+    var c = 0;
+    if (document.getElementById("c3").style.display != "none") {
+        c = Math.floor(Math.random() * 3) + 1;
+    } else {
+        c = Math.floor(Math.random() * 2) + 1;
+    }
+    
     return c;
 }
 
@@ -60,10 +66,10 @@ function end() {
 }
 
 function score() {
-    document.getElementById("c3").style.display = "initial";
     globalThis.scr = document.getElementById("scr");
     globalThis.hintT = document.getElementById("hint");
     var cor = correct();
+    document.getElementById("c3").style.display = "initial";
     var start = (function () {
         return function () {
             if (!executed) {
@@ -77,7 +83,9 @@ function score() {
     })();
 
     start();
-
+    document.getElementById("c1").innerHTML = clicked;
+    document.getElementById("c2").innerHTML = cor;
+    clicked = cor;
     if (clicked == cor) {
         total++;
         counter++;
