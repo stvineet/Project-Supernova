@@ -1,0 +1,96 @@
+body {
+    background-color: white;
+}
+
+#box {
+    background-image: url('images/palette.png');
+    border: 2px black solid;
+    padding: 1%;
+    width: 98%;
+    height: 100%;
+}
+
+button {
+    width: 10%;
+    padding: 0.5%;
+    background-color: white;
+    border: 2px black solid;
+    color: black;
+    text-align: center;
+}
+
+#box2 {
+    text-align: center;
+}
+
+.topLeft {
+    margin-right: 39.5%;
+}
+
+.topRight {
+    margin-left: 39.5%;
+}
+
+#box3 {
+    background-color: white;
+    border: 2px black solid;
+    text-align: center;
+    padding: 1%;
+    margin-top: 1%;
+    margin-left: 37%;
+    margin-right: 37%;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+#box4 {
+    text-align: center;
+}
+
+h2 {
+    display: inline;
+}
+
+.E {
+    float: left;
+}
+
+.M {
+    float: none;
+}
+
+.H {
+    float: right;
+}
+
+#box5 {
+    text-align: center;
+    background-color: white;
+    border: 2px black solid;
+    margin-top: 1%;
+    margin-bottom: 3.3%;
+}
+
+.C {
+    padding: 10.2%;
+    display: inline-block;
+}
+
+.Medium {
+    border-left: 2px black solid;
+    border-right: 2px black solid;
+}
+
+button:hover {
+    background-color: black;
+    border-color: white;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+button:active {
+    background-color: red;
+}
