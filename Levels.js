@@ -65,12 +65,18 @@ function correct() {
 }
 
 function end() {
-    scr.innerHTML = "Score: 0";
-    hintT.innerHTML = "Hints: " + hints;
-    alert("Game Over \n Score: " + total);
-    total = 0;
-    hints = 0;
-    history.back();
+    if (lives == 0){
+        scr.innerHTML = "Score: 0";
+        hintT.innerHTML = "Hints: " + hints;
+        alert("Game Over \n Score: " + total);
+        total = 0;
+        hints = 0;
+        history.back();
+    }
+    else if (lives >0){
+    lives--;
+    liv.innerHTML = "Extra Lives: "+lives;
+    }
 }
 
 function score() {
@@ -84,6 +90,7 @@ function score() {
                 globalThis.hints = 1;
                 globalThis.total = 0;
                 globalThis.counter = 0;
+                globalThis.lives = 5;
                 hintT.innerHTML = "Hints: " + hints;
                 executed = true;
             }
@@ -101,6 +108,7 @@ function score() {
             hintT.innerHTML = "Hints: " + hints;
         }
         scr.innerHTML = "Score: " + total + " point(s)";
+        liv.innerHTML = "Extra Lives: "+lives;
     } else if (clicked != cor) {
         end();
     }
