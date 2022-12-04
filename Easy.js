@@ -60,7 +60,7 @@ function end() {
 }
 
 function score() {
-    document.getElementById("c3").style.display = "inline";
+    document.getElementById("c3").style.display = "initial";
     globalThis.scr = document.getElementById("scr");
     globalThis.hintT = document.getElementById("hint");
     var cor = correct();
