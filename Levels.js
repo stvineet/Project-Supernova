@@ -91,9 +91,6 @@ function score() {
     })();
 
     start();
-    document.getElementById("c1").innerHTML = clicked;
-    document.getElementById("c2").innerHTML = cor;
-    clicked = cor;
     if (clicked == cor) {
         total++;
         counter++;
