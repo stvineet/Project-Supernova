@@ -72,6 +72,10 @@ h3 {
     font-weight: bold;
 }
 
+#hint {
+    display: none;
+}
+
 .b1:hover {
     background-color: white;
     border-color: black;

@@ -62,6 +62,7 @@ function end() {
     alert("Game Over \n Score: " + total);
     total = 0;
     hints = 0;
+    lives = 0;
     history.back();
 }
 
@@ -74,6 +75,8 @@ function score() {
     var start = (function () {
         return function () {
             if (!executed) {
+                hintT.style.display = "initial";
+                document.getElementById("hint2").innerHTML = "Hints: ";
                 globalThis.hints = hintT.innerHTML;
                 globalThis.lives = livesT.innerHTML;
                 globalThis.total = 0;
@@ -84,7 +87,7 @@ function score() {
     })();
 
     start();
-
+    
     if (clicked == cor) {
         total++;
         counter++;
@@ -96,7 +99,7 @@ function score() {
             lives++;
             livesT.innerHTML = lives;
         }
-        if (counter % 6 == 0) {
+        if (counter % 5 == 0) {
             total++;
         }
         scr.innerHTML = "Score: " + total + " point(s)";
