@@ -68,15 +68,16 @@ function end() {
 function score() {
     globalThis.scr = document.getElementById("scr");
     globalThis.hintT = document.getElementById("hint");
+    globalThis.livesT = document.getElementById("lives");
     var cor = correct();
     document.getElementById("c3").style.display = "initial";
     var start = (function () {
         return function () {
             if (!executed) {
-                globalThis.hints = 1;
+                globalThis.hints = hintT.innerHTML;
+                globalThis.lives = livesT.innerHTML;
                 globalThis.total = 0;
                 globalThis.counter = 0;
-                hintT.innerHTML = hints;
                 executed = true;
             }
         };
@@ -87,14 +88,24 @@ function score() {
     if (clicked == cor) {
         total++;
         counter++;
-        if (counter == 3) {
-            counter = 0;
+        if (counter % 3 == 0) {
             hints++;
             hintT.innerHTML = hints;
         }
+        if (counter % 5 == 0) {
+            lives++;
+            livesT.innerHTML = lives;
+        }
+        if (counter % 6 == 0) {
+            total++;
+        }
         scr.innerHTML = "Score: " + total + " point(s)";
     } else if (clicked != cor) {
-        end();
+        lives--;
+        livesT.innerHTML = lives;
+        if (lives <= 0) {
+            end();
+        }
     }
 }
 
