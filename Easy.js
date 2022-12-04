@@ -98,13 +98,13 @@ function score() {
         if (counter == 3) {
             counter = 0;
             hints++;
+            lives++;
             hintT.innerHTML = "Hints: " + hints;
         }
         scr.innerHTML = "Score: " + total + " point(s)";
         liv.innerHTML = "Extra Lives: "+lives;
     } else if (clicked != cor) {
         end();
-
     }
 }
 
