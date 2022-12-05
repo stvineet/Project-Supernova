@@ -1,13 +1,14 @@
+var x = document.getElementById("css").href;
 var y = document.getElementById("css2").href;
 var z = document.getElementById("css3").href;
 var clicked = 0;
 var executed = false;
 
 function darkMode() {
-    if (y == "LevelsDark.css") {
-        y = document.getElementById("css2").href = "Levels.css"
+    if (x == "MainDark.css") {
+        x = document.getElementById("css").href = "Main.css"
     } else {
-        y = document.getElementById("css2").href = "LevelsDark.css"
+        x = document.getElementById("css").href = "MainDark.css"
     }
 }
 
@@ -16,6 +17,14 @@ function darkMode2() {
         y = document.getElementById("css2").href = "Levels.css"
     } else {
         y = document.getElementById("css2").href = "LevelsDark.css"
+    }
+}
+
+function darkMode3() {
+    if (z == "LeaderboardDark.css") {
+        z = document.getElementById("css3").href = "Leaderboard.css"
+    } else {
+        z = document.getElementById("css3").href = "LeaderboardDark.css"
     }
 }
 

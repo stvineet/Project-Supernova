@@ -1,9 +1,18 @@
+var x = document.getElementById("css").href;
 var y = document.getElementById("css2").href;
 var z = document.getElementById("css3").href;
 var clicked = 0;
 var executed = false;
 
 function darkMode() {
+    if (x == "MainDark.css") {
+        x = document.getElementById("css").href = "Main.css"
+    } else {
+        x = document.getElementById("css").href = "MainDark.css"
+    }
+}
+
+function darkMode2() {
     if (y == "LevelsDark.css") {
         y = document.getElementById("css2").href = "Levels.css"
     } else {
@@ -11,7 +20,7 @@ function darkMode() {
     }
 }
 
-function darkMode2() {
+function darkMode3() {
     if (z == "LeaderboardDark.css") {
         z = document.getElementById("css3").href = "Leaderboard.css"
     } else {
