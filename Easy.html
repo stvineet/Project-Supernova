@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="Easy.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="ServerSide.js"></script>
     <link rel="stylesheet" href="Levels.css" type="text/css" id="css2">
     <title>Color Guessing Game</title>
 </head>
@@ -19,14 +21,14 @@
         <div id="box3">
             <h1>Easy Mode</h1>
             <h3 class="guess">Guess a color</h3>
-            <h3><span class="score" id="scr">Score: 0 point(s)</span>Extra Lives: <span id="lives">5</span></h3>
+            <h3><span class="score" id="scr">Score: 0 point(s)</span>Extra Lives: <span id="lives">5</span><span id="bonusL"> + 1!</span></h3>
         </div>
         <div id="box4">
             <button class="button b2 o1" onclick="clicked1(); color(); score()" id="c1"></button>
             <button class="button b2 o2" onclick="clicked2(); color(); score()" id="c2"></button>
             <button class="button b2 o3" onclick="clicked3(); color(); score()" id="c3"></button>
             </br>
-            <button class="button b3" onclick="hint()"><span id="hint2">Hints: 0</span><span id="hint">3</span></button>
+            <button class="button b3" onclick="hint()"><span id="hint2">Hints: 0</span><span id="hint">3</span><span id="bonusH"> + 1!</span></button>
         </div>
     </div>
 </body>

@@ -76,6 +76,16 @@ h3 {
     display: none;
 }
 
+#bonusL {
+    display: none;
+    color: green;
+}
+
+#bonusH {
+    display: none;
+    color: green;
+}
+
 .b1:hover {
     background-color: white;
     border-color: black;

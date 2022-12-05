@@ -1,9 +1,12 @@
+//Easy Difficulty 
 var x = document.getElementById("css").href;
 var y = document.getElementById("css2").href;
 var z = document.getElementById("css3").href;
 var clicked = 0;
 var executed = false;
+var url = "http://localhost:3000/post";
 
+// Dark Modes
 function darkMode() {
     if (x == "MainDark.css") {
         x = document.getElementById("css").href = "Main.css"
@@ -28,6 +31,7 @@ function darkMode3() {
     }
 }
 
+// Generates 9 variables for 3 arrays; 3 * 3 = 9; 3 RGB values * 3 colors
 function color() {
     const r = [];
     const c = ["c1", "c2", "c3"];
@@ -63,6 +67,11 @@ function clicked3() {
     clicked = 3;
 }
 
+/*
+   Generates the correct value
+   between 1 and 3 if no hint is used
+   between 1 and 2 if 1 hint is used
+*/
 function correct() {
     var c = 0;
     if (document.getElementById("c3").style.display != "none") {
@@ -70,10 +79,10 @@ function correct() {
     } else {
         c = Math.floor(Math.random() * 2) + 1;
     }
-
     return c;
 }
 
+// Ends game and takes player to the leaderboard page
 function end() {
     scr.innerHTML = "Score: 0";
     hints = 0;
@@ -83,22 +92,27 @@ function end() {
     window.location.href = "Leaderboard.html";
 }
 
+/*
+   Main function:
+   Initializes global variables with the start() function
+   Compares the correct color with the color the player clicks
+*/
 function score() {
-    globalThis.scr = document.getElementById("scr");
-    globalThis.hintT = document.getElementById("hint");
-    globalThis.livesT = document.getElementById("lives");
     var cor = correct();
     document.getElementById("c3").style.display = "initial";
     var start = (function () {
         return function () {
             if (!executed) {
+                globalThis.scr = document.getElementById("scr");
+                globalThis.hintT = document.getElementById("hint");
+                globalThis.livesT = document.getElementById("lives");
                 hintT.style.display = "initial";
                 document.getElementById("hint2").innerHTML = "Hints: ";
-                globalThis.hints = hintT.innerHTML;
+                globalThis.hints = hintT.innerHTML; //Initialize all necessary variables globally
                 globalThis.lives = livesT.innerHTML;
                 globalThis.lead = 0;
                 globalThis.hScore;
-
+                
                 if (window.location.href.indexOf("Easy") > -1) {
                     lead = 1;
                 } else if (window.location.href.indexOf("Medium") > -1) {
@@ -106,7 +120,6 @@ function score() {
                 } else if (window.location.href.indexOf("Hard") > -1){
                     lead = 3;
                 }
-
                 globalThis.total = 0;
                 globalThis.counter = 0;
                 executed = true;
@@ -117,22 +130,35 @@ function score() {
     start();
 
     if (clicked == cor) {
-        total++;
-        counter++;
-        if (counter % 3 == 0) {
-            hints++;
+        total++;//Increments score
+        counter++;//Counts correct answers
+        if (counter % 3 == 0) {//Counts 3 turns
+            hintT.innerHTML = hints;
+            hints++;//Adds extra hint
+            document.getElementById("bonusH").style.display = "initial";
+            scr.innerHTML = "Score: " + total + " point(s)";
+        } else {
+            document.getElementById("bonusH").style.display = "none";
             hintT.innerHTML = hints;
         }
-        if (counter % 5 == 0) {
-            lives++;
+        if (counter % 5 == 0) {//Counts 5 turns
+            livesT.innerHTML = lives;
+            lives++;//Adds extra life 
+            document.getElementById("bonusL").style.display = "initial";
+            scr.innerHTML = "Score: " + total + " point(s)";
+        } else {
+            document.getElementById("bonusL").style.display = "none";
             livesT.innerHTML = lives;
         }
-        if (counter % 5 == 0) {
-            total++;
+        if (counter % 5 == 0) {//Counts 5 turns
+            total++;//Adds extra point
+            scr.innerHTML = "Score: " + total + " point(s) " + "Bonus point!";
+        } else {
+            scr.innerHTML = "Score: " + total + " point(s)";
         }
-        scr.innerHTML = "Score: " + total + " point(s)";
+        
     } else if (clicked != cor) {
-        lives--;
+        lives--;//Lose a life if wrong guess
         livesT.innerHTML = lives;
         if (lives < 0) {
             //leaderboard();
@@ -141,14 +167,17 @@ function score() {
     }
 }
 
+//Uses 1 hint to remove 1 option
 function hint() {
     if (hints > 0 && document.getElementById("c3").style.display != "none") {
         hints--;
         document.getElementById("c3").style.display = "none";
         hintT.innerHTML = hints;
+        document.getElementById("bonusH").style.display = "none";
     }
 }
 
+//Unused function
 function leaderboard() {
     if (lead == 1) {
         getElementById("score1E").innerHTML = total;
