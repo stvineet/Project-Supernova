@@ -1,0 +1,82 @@
+body {
+    background-color: black;
+}
+
+#box {
+    background-image: url('images/palette.png');
+    border: 2px white solid;
+    padding: 1%;
+    width: 98%;
+    height: 100%;
+}
+
+button {
+    width: 10%;
+    padding: 0.5%;
+    background-color: black;
+    border: 2px white solid;
+    color: white;
+    text-align: center;
+}
+
+#box2 {
+    text-align: center;
+}
+
+.topLeft {
+    margin-right: 39.5%;
+}
+
+.topRight {
+    margin-left: 39.5%;
+}
+
+#box3 {
+    background-color: black;
+    border: 2px white solid;
+    text-align: center;
+    padding: 1%;
+    margin-top: 1%;
+    margin-left: 37%;
+    margin-right: 37%;
+}
+
+h1 {
+    color: white;
+}
+
+#box4 {
+    text-align: center;
+    background-color: black;
+    margin-top: 1%;
+    height: 513px;
+}
+
+table, th, td {
+    color: white;
+    border: 2px white solid;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+}
+
+th {
+    font-size: 25px;
+}
+
+td {
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: white;
+    border-color: black;
+    color: black;
+    transition-duration: 0.5s;
+}
+
+button:active {
+    background-color: red;
+}

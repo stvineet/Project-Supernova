@@ -1,4 +1,5 @@
 var y = document.getElementById("css2").href;
+var z = document.getElementById("css3").href;
 var clicked = 0;
 var executed = false;
 
@@ -7,6 +8,14 @@ function darkMode() {
         y = document.getElementById("css2").href = "Levels.css"
     } else {
         y = document.getElementById("css2").href = "LevelsDark.css"
+    }
+}
+
+function darkMode2() {
+    if (z == "LeaderboardDark.css") {
+        z = document.getElementById("css3").href = "Leaderboard.css"
+    } else {
+        z = document.getElementById("css3").href = "LeaderboardDark.css"
     }
 }
 
