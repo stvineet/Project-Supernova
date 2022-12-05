@@ -58,12 +58,11 @@ function correct() {
 
 function end() {
     scr.innerHTML = "Score: 0";
-    hintT.innerHTML = hints;
+    hints = 0;
+    hScore = total;
     alert("Game Over \n Score: " + total);
     total = 0;
-    hints = 0;
-    lives = 0;
-    history.back();
+    window.location.href = "Leaderboard.html";
 }
 
 function score() {
@@ -79,6 +78,17 @@ function score() {
                 document.getElementById("hint2").innerHTML = "Hints: ";
                 globalThis.hints = hintT.innerHTML;
                 globalThis.lives = livesT.innerHTML;
+                globalThis.lead = 0;
+                globalThis.hScore;
+
+                if (window.location.href.indexOf("Easy") > -1) {
+                    lead = 1;
+                } else if (window.location.href.indexOf("Medium") > -1) {
+                    lead = 2;
+                } else if (window.location.href.indexOf("Hard") > -1){
+                    lead = 3;
+                }
+
                 globalThis.total = 0;
                 globalThis.counter = 0;
                 executed = true;
@@ -107,6 +117,7 @@ function score() {
         lives--;
         livesT.innerHTML = lives;
         if (lives < 0) {
+            //leaderboard();
             end();
         }
     }
@@ -117,5 +128,15 @@ function hint() {
         hints--;
         document.getElementById("c3").style.display = "none";
         hintT.innerHTML = hints;
+    }
+}
+
+function leaderboard() {
+    if (lead == 1) {
+        getElementById("score1E").innerHTML = total;
+    } else if (lead == 2) {
+        getElementById("score1M").innerHTML = total;
+    } else if (lead == 3) {
+        getElementById("score1H").innerHTML = total;
     }
 }
